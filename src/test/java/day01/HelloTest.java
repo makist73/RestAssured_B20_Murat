@@ -1,8 +1,10 @@
+package day01;
+
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
+@DisplayName("Day 1 Hello Test")
 public class HelloTest {
 
     // Junit5 Annotations
@@ -28,14 +30,15 @@ public class HelloTest {
    public void tearDownTest(){
        System.out.println("@AfterEach is running");
    }
-
+    @DisplayName("Test 1 + 3 = 4")
     @Test
     public void test(){
         System.out.println("test 1 is running");
         Assertions.assertEquals(4,1+3);
 
     }
-
+    @Disabled
+    @DisplayName("Test 3 * 4 = 12")
     @Test
     public void test2(){
         System.out.println("test 2 is running");
